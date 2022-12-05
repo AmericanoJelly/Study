@@ -52,6 +52,10 @@ alert( arr.concat(arrayLike) ); // 1,2,[object Object]
 배열 탐색하기 - 주어진 함수를 배열 요소에 각각에 대해 실행할 수 있다.
 인수로 넘겨준 함수의 반환값은 무시된다
 
+## indexOf
+- arr.indexOf(item, from)은 from부터 시작해 item(요소)를 찾는다.
+발견하면 해당 요소의 인덱스를 반환하고 발견하지 못하면 -1을 반환한다
+
 
 
 
