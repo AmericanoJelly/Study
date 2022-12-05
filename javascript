@@ -62,7 +62,53 @@ alert( arr.concat(arrayLike) ); // 1,2,[object Object]
 ## includes (배열 내 존재여부만 확인)
 - arr.includes(item, from)는 인덱스 from 부터 시작해 item이 있는지를 검색, 해당하는 요소를 발견하면 true 반환
 
+## find / findindex
+특정 조건에 부학하는 객체 찾기 
+findIndex는 find와 동일한 일을 하나, 조건에 맞는 요소를 반환하는 대신 해당 요소의 인덱스를 반환한다는 점이 다르다. 조건에 맞는 요소가 없으면 -1이 반환된다.
+(item => item.id == 1). 이런 패턴이 가장 많이 사용되는 편. 다른 인자들(index, array)은 잘 사용되지 않는다
 
+- let result = arr.find(function(item, index, array) {
+  // true가 반환되면 반복이 멈추고 해당 요소를 반환합니다.
+  // 조건에 해당하는 요소가 없으면 undefined를 반환합니다.
+});
+item – 함수를 호출할 요소
+index – 요소의 인덱스
+array – 배열 자기 자신
+
+ex) let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+let user = users.find(item => item.id == 1);
+
+alert(user.name); // John
+
+## filter 
+조건에 맞는 요소 전체를 담은 배열을 반환
+- let results = arr.filter(function(item, index, array) {
+  // 조건을 충족하는 요소는 results에 순차적으로 더해집니다.
+  // 조건을 충족하는 요소가 하나도 없으면 빈 배열이 반환됩니다.
+});
+
+ex) let users = [
+  {id: 1, name: "John"},
+  {id: 2, name: "Pete"},
+  {id: 3, name: "Mary"}
+];
+
+// 앞쪽 사용자 두 명을 반환합니다.
+let someUsers = users.filter(item => item.id < 3);
+
+alert(someUsers.length); // 2
+
+## map
+- let lengths = ["Bilbo", "Gandalf", "Nazgul"].map(item => item.length);
+alert(lengths); // 5,7,6
+
+## sort
+배열의 요소를 정렬해준다.
 
 
 
