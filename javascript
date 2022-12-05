@@ -56,6 +56,12 @@ alert( arr.concat(arrayLike) ); // 1,2,[object Object]
 - arr.indexOf(item, from)은 from부터 시작해 item(요소)를 찾는다.
 발견하면 해당 요소의 인덱스를 반환하고 발견하지 못하면 -1을 반환한다
 
+## lastIndexOf
+- arr.lastIndexOf(item, from)는 검색을 끝에서 부터 시작
+
+## includes (배열 내 존재여부만 확인)
+- arr.includes(item, from)는 인덱스 from 부터 시작해 item이 있는지를 검색, 해당하는 요소를 발견하면 true 반환
+
 
 
 
