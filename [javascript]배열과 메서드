@@ -155,6 +155,32 @@ delimiter을 기준으로 문자열을 쪼개준다.
   let str = arr.join(';'); // 배열 요소 모두를 ;를 사용해 하나의 문자열로 합칩니다.
 
   alert( str ); // Bilbo;Gandalf;Nazgul
+  
+## reduce와 reduceRight
+배열을 기반으로 값 하나를 도출할 때 사용한다.
+배열이 비어있는 상태로 초기값 없이 사용하면 에러 
+  
+  - let value = arr.reduce(function(accumulator, item, index, array) {
+      // ...
+    }, [initial]);
+accumulator – 이전 함수 호출의 결과. initial은 함수 최초 호출 시 사용되는 초깃값을 나타냄(옵션), 함수의 결과가 누적되어 저장된다.
+item – 현재 배열 요소
+index – 요소의 위치
+array – 배열
+
+ex) let arr = [1, 2, 3, 4, 5];
+
+  let result = arr.reduce((sum, current) => sum + current, 0);
+
+  alert(result); // 15
+  
+## Array.isArray로 배열 여부 알아내기
+value가 배열이라면 true, 아니라면 false를 반환한다.
+alert(Array.isArray({})); // false
+
+alert(Array.isArray([])); // true
+
+  
 
 
 
