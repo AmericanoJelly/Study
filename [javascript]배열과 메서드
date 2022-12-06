@@ -189,7 +189,7 @@ alert(Array.isArray([])); // true
 ## 요소를 더하거나 지우기
 push(...items) – 맨 끝에 요소 추가하기
 pop() – 맨 끝 요소 추출하기
-shift() – 첫 요소 추출하기
+shift() – 첫 요소 추출하기, 배열 첫번째 요소 제거하고 반환
 unshift(...items) – 맨 앞에 요소 추가하기
 splice(pos, deleteCount, ...items) – pos부터 deleteCount개의 요소를 지우고, items 추가하기
 slice(start, end) – start부터 end 바로 앞까지의 요소를 복사해 새로운 배열을 만듦
